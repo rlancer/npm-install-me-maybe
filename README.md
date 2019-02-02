@@ -13,4 +13,3 @@ Installs your NPM modules only if they are out of date, designed for CICD system
 <!-- usage -->
 # Commands
 <!-- commands -->
-# npm-install-me-maybe
