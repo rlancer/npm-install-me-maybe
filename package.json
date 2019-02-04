@@ -1,7 +1,7 @@
 {
   "name": "install-me-maybe",
   "description": "Installs your NPM modules only if they are out of date, designed for CICD systems ",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "author": "Robert Lancer",
   "bin": {
     "install-me-maybe": "./bin/run"
