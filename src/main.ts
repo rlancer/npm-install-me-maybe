@@ -31,8 +31,8 @@ export default (args: any, flags: any) => {
     const dir = spawn('npm', ['i'])
 
 
-    dir.stdout.on('data', data => console.log(data))
-    dir.stderr.on('data', data => console.log(data))
+    dir.stdout.on('data', data => console.log(data.toString()))
+    dir.stderr.on('data', data => console.log(data.toString()))
     // dir.on('close', code => console.log(`child process exited with code ${code}`))
 
   } else {
