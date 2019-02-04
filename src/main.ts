@@ -12,6 +12,10 @@ export default (args: any, flags: any) => {
   const existingHash = fs.existsSync(outfile) ? fs.readFileSync(outfile, {encoding: 'utf8'}) : ''
 
 
+  if (!existingHash) {
+    console.log('Could not find hash file, installing packages')
+  }
+
   const isYarn = fs.existsSync('yarn.lock')
 
   const data = fs.readFileSync(isYarn ? 'yarn.lock' : 'package-lock.json', {encoding: 'utf8'})
@@ -26,9 +30,10 @@ export default (args: any, flags: any) => {
   if (hash !== existingHash) {
     const dir = spawn('npm', ['i'])
 
-    dir.stdout.on('data', data => console.log(`stdout: ${data}`))
-    dir.stderr.on('data', data => console.log(`stderr: ${data}`))
-    dir.on('close', code => console.log(`child process exited with code ${code}`))
+
+    // dir.stdout.on('data', data => console.log(`stdout: ${data}`))
+    // dir.stderr.on('data', data => console.log(`stderr: ${data}`))
+    // dir.on('close', code => console.log(`child process exited with code ${code}`))
 
   } else {
     console.log('Not installing ')

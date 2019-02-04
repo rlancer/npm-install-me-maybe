@@ -28,10 +28,6 @@ class NpmInstallMeMaybe extends Command {
 
 
 
-
-    console.log(args)
-
-
   }
 }
 
