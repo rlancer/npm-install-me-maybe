@@ -29,7 +29,10 @@
   ],
   "homepage": "https://github.com/rlancer/npm-install-me-maybe",
   "keywords": [
-    "oclif"
+    "oclif",
+    "install",
+    "idempotent insall",
+    "CI / CD"
   ],
   "license": "MIT",
   "main": "lib/index.js",
