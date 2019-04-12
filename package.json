@@ -1,6 +1,6 @@
 {
   "name": "install-me-maybe",
-  "description": "Installs your NPM modules only if they are out of date, designed for CICD systems ",
+  "description": "Installs your NPM modules only if they are out of date, designed for CI / CD systems ",
   "version": "0.0.5",
   "author": "Robert Lancer",
   "bin": {
